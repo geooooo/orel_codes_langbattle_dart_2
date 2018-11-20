@@ -1,0 +1,7 @@
+# ide
+.vscode/
+
+# dart
+dart_tool/
+.packages
+build/

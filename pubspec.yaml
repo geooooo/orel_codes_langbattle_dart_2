@@ -1,0 +1,8 @@
+name: orel_codes_langbattle_daaart_2
+version: 1.0.0
+author: Iurii Kornienko geo97it@gmail.com
+environment:
+  sdk: ^2.0.0
+dependencies:
+  crypto: ^2.0.6
+  date_format: ^1.0.5
