@@ -68,13 +68,13 @@ Future<void> _handler(iso.SendPort writer) async {
                                .bytes
                                .map((int byte) => byte.toRadixString(16))
                                .join('');
-      jsonData['first_name'] += firstNameMD5;
+      jsonData['first_name'] += ' ' + firstNameMD5;
       final lastNameMD5 = cryp.md5
                               .convert(conv.utf8.encode(jsonData['last_name']))
                               .bytes
                               .map((int byte) => byte.toRadixString(16))
                               .join('');
-      jsonData['last_name'] += lastNameMD5;
+      jsonData['last_name'] += ' ' + lastNameMD5;
       final dateFormat = [
         format.yyyy, '-', format.m, '-', format.dd,
         ' ',
@@ -82,8 +82,8 @@ Future<void> _handler(iso.SendPort writer) async {
         ' ',
         format.z
       ];
-      jsonData['current_time'] = format.formatDate(DateTime.now(), dateFormat);
       jsonData['say'] = 'Dart is beautiful !';
+      jsonData['current_time'] = format.formatDate(DateTime.now(), dateFormat);
       writer.send(jsonData);
     }
   }

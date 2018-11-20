@@ -10,9 +10,9 @@ void main(List<String> args) {
     final httpClient = io.HttpClient();
     httpClient.post('localhost', 8080, '').then((request) async {
       request.write(conv.jsonEncode({
-        'id': 'id',
-        'first_name': 'firstname',
-        'last_name': 'lastname'
+        'id': 'Rand ID',
+        'first_name': 'Rand Name',
+        'last_name': 'Rand Last Name'
       }));
       final response = await request.close();
       final jsonData = conv.utf8.decode(await response.single);
