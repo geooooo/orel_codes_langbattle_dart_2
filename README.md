@@ -1,17 +1,17 @@
-## Как запускать
+## Usage
 
-1. Установить Dart SDK 2.1
-2. Перейти в корень репозитория
-3. Запустить
+1. install Dart SDK 2.1
+2. move to repository root
+3. run
 
 ```
 cd orel_codes_langbattle_dart_2
-pub run start_server.dart [число воркеров = 2 (лучше ставить под количество ядер CPU)]
+pub run start_server.dart [worker count = 2 (It's better to set it according to the number of CPU cores)]
 ```
 
-4. Запросы принимаются по адресу `http://localhost:8080/`
+4. Server listen request here: `http://localhost:8080/`
 
-Пример запроса:
+Request example:
 
 ```
 {
@@ -21,7 +21,7 @@ pub run start_server.dart [число воркеров = 2 (лучше став�
 }
 ```
 
-Пример ответа:
+Response example:
 
 ```
 {
@@ -33,14 +33,13 @@ pub run start_server.dart [число воркеров = 2 (лучше став�
 }
 ```
 
-## Контест для Orel Codes
+## For Orel Codes contest
 
-Задача:
+Target:
 
-Написать программу котороая принимает по HTTP Post запрос в JSON и
-по полученному JSON'у гененрирует в ответ JSON
+Write a program that receives a JSON HTTP POST request and, based on the received JSON, generates a JSON response
 
-Пример Input'а
+Input example
 
 ```javascript
 {
@@ -62,12 +61,12 @@ Output:
 }
 ```
 
-В ответе должен быть заголовок
+Response should contain header:
 
 Content-Type: application/json
 
-Формат сurrent_time: %F %T %z (2018-11-01 17:35:15 +0300)
+Format: сurrent_time: %F %T %z (2018-11-01 17:35:15 +0300)
 
-## Стек
+## Stack
 
 Dart 2.1
